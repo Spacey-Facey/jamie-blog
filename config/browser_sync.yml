@@ -1,0 +1,7 @@
+host: 'localhost'
+port: 3000
+files:
+  - 'app/views/**/*.html.erb'
+  - 'app/assets/**/*.scss'
+  - 'app/assets/**/*.css'
+  - 'app/assets/**/*.js'
