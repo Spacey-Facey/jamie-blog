@@ -1,8 +1,21 @@
 /* universal */
+
+// universal fonts
+@import url('https://fonts.googleapis.com/css?family=PT+Serif:400,400i|Raleway:400,700,900i');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+$header: 'Raleway', sans-serif;
+$body: 'PT Serif', serif;
+
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font: 16px/1.2em $body;
+}
+
+h1 {
+    font: 3em $header;
+    text-transform: uppercase;
 }
 
 ul {
@@ -11,6 +24,8 @@ ul {
 
 a {
   text-decoration: none;
+  font-family: $header;
+  font-weight: bold;
 }
 
 .container {
@@ -44,15 +59,21 @@ a {
 .topnav a.icon {
   display: none;
   font-size: 25px;
+  font-family: FontAwesome;
+  &:after {
+    content: "\f047";
+  }
 }
 
 .topnav-links {
   float: right;
-  margin: 0 2em 0 0;
 }
 
 // navigation media queries
 @media screen and (max-width: 600px) {
+  .topnav-links {
+    float: none;
+  }
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
     float: right;
@@ -68,5 +89,8 @@ a {
     float: none;
     display: block;
     text-align: left;
+    &:last-child::after {
+      content: "\f0b2";
+    }
   }
 }
