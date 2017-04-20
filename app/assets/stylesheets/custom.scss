@@ -3,6 +3,8 @@
 // universal fonts
 @import url('https://fonts.googleapis.com/css?family=PT+Serif:400,400i|Raleway:400,700,900i');
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@import 'gallery';
+
 $header: 'Raleway', sans-serif;
 $body: 'PT Serif', serif;
 
@@ -32,8 +34,6 @@ a {
   max-width: 85%;
   position: relative;
   margin: 0 auto;
-  /* temporarily fit height to vh */
-  height: 100vh;
 }
 
 .footer {
