@@ -35,6 +35,23 @@ a {
   font-weight: bold;
 }
 
+footer {
+  position: absolute;
+  display: block;
+  height: 50px;
+  margin: 0;
+  padding: 1em 0;
+  color: #ddd;
+  &:before {
+    content: '';
+    display: block;
+    clear: both;
+  }
+  small {
+    float: left;
+    position: relative;
+  }
+}
 .container {
   max-width: 85%;
   position: relative;
@@ -55,7 +72,6 @@ a {
   overflow: hidden;
   background-color: #333;
   width: 100%;
-  box-sizing: inherit;
   display: block;
   margin: 0;
   padding: 0;
