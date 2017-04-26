@@ -1,0 +1,63 @@
+nav {
+  width: 100%;
+  display: block;
+  background: #000;
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+  ul {
+    float: right;
+    position: relative;
+    line-height: 2em;
+    li {
+      margin-right: 1.2em;
+    }
+  }
+  a {
+    color: #fff;
+  }
+  .icon {
+    font: 1.5rem FontAwesome;
+    display: none;
+    &:after {
+      content: "\f047";
+      position: relative;
+      z-index: 1;
+      top: 0;
+      right: 1.2em;
+      float: right;
+    }
+    @media screen and (max-width: 600px) {
+      display: inline;
+    }
+  }
+}
+.sub-nav-parent {
+  position: relative;
+  &:hover .sub-menu {
+    visibility: visibile;
+    opacity: 1;
+    z-index: 1;
+    transform: translateY(0%);
+    transition-delay: 0s, 0s, .3s;
+  }
+}
+.sub-nav {
+  position: absolute;
+  top: 0;
+  transform: translateY(4em);
+  width: 100%;
+  z-index: -1;
+  transition: all .3s ease-in-out 0s, visibility 0s linear .3s, z-index 0s linear .01s;
+}
+
+@media screen and (max-width: 600px) {
+  .sub-nav.responsive {
+    position: relative;
+    background: #ddd;
+  }
+  .sub-nav.responsive a {
+    display: block;
+    color: #111;
+  }
+}

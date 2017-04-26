@@ -64,6 +64,8 @@ footer {
 #logo {
   text-transform: uppercase;
   @media screen and (max-width: 600px) {
-    font-size: .7rem;
+    font-size: 1rem;
+    position: absolute;
+    top: 1em;
   }
 }

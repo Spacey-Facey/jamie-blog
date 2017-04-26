@@ -1,9 +1,17 @@
-<nav>
+<nav id="myTopnav">
   <div class="container">
     <%= link_to "Space Bubbles", '#', id: "logo" %>
   </div>
   <ul>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()"></a>
     <li class="sub-nav-parent">
+      <ul class="sub-nav">
+        <li><%= link_to "Home", '#' %></li>
+        <li><%= link_to "Gallery", '#' %></li>
+        <li><%= link_to "About", '#' %></li>
+        <li><%= link_to "Contact", '#' %></li>
+        <li><%= link_to "Donate", '#' %></li>
+      </ul>
     </li>
   </ul>
 </nav>
