@@ -15,8 +15,6 @@ $body: 'PT Serif', serif;
 body {
   margin: 0;
   padding: 0;
-  min-height: 100%;
-  padding-bottom: 80px;
   font: 16px/1.2em $body;
 }
 
@@ -63,9 +61,14 @@ footer {
 
 #logo {
   text-transform: uppercase;
+  color: #fff;
+  font-size: 3em;
+  top: .5em;
+  left: 2em;
+  position: absolute;
   @media screen and (max-width: 600px) {
-    font-size: 1rem;
-    position: absolute;
-    top: 1em;
+    font-size: 1.2rem;
+    top: 1.2em;
+    left: 1em;
   }
 }
