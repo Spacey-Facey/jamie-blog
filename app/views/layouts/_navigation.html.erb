@@ -1,14 +1,15 @@
 <nav>
-  <%= link_to "Space Bubbles", '#', id: "logo" %>
+  <%= link_to "space bubbles", root_path, id: "logo" %>
   <ul>
     <li class="sub-nav-parent" id="myTopnav">
       <ul class="sub-nav">
-        <li><a href="javascript:void(0);" class="icon" onclick="myFunction()"></a></li>
+        <li><%= link_to "Home", '#' %></li>
         <li><%= link_to "Gallery", '#' %></li>
         <li><%= link_to "About", '#' %></li>
         <li><%= link_to "Contact", '#' %></li>
         <li><%= link_to "Donate", '#' %></li>
       </ul>
+      <li><a href="javascript:void(0);" class="icon" onclick="myFunction()"></a></li>
     </li>
   </ul>
 </nav>

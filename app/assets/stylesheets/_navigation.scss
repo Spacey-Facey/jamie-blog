@@ -1,43 +1,64 @@
 nav {
-  background: #000;
-  width: 100%;
-  height: 75px;
-  margin: 0;
-  padding: 0;
-  display: block;
-  position: fixed;
-  }
   a {
     color: #fff;
   }
+  background-color: #111;
+  display: block;
+  width: 100%;
+  height: 4em;
+  position: fixed;
   ul {
-    float: right;
+    text-align: right;
+    width: 100%;
     position: relative;
-    top: .25em;
+    top: -.4em;
+    @media screen and (max-width: 800px) {
+      background: inherit;
+      position: initial;
+    }
     li {
       display: inline;
-      right: .2em;
-      margin-right: 1em;
-      &:not(:first-child) {
-        @media screen and (max-width: 600px) {
-          display: none;
+      margin-right: .7em;
+      @media screen and (max-width: 800px) {
+        display: block;
+        text-align: right;
+        margin: 0 .5em 0;
+        line-height: 1.5em;
+        &:last-child {
+          padding-bottom: 1em;
         }
       }
     }
+  }
+}
 
-    // icon
-    .icon {
-      display: none;
-      font: 2em "FontAwesome";
-      float: right;
-      &:after {
-        content: "\f053";
-      }
-      @media screen and (max-width: 600px) {
-        display: inline;
-        margin: 0 .65em;
-      }
-    // end icon
+.sub-nav {
+  transition: all .3s ease-in-out 0s, transform 0s linear .3s;
+  margin-right: 1em;
+  @media screen and (max-width: 800px) {
+    transform: translateY(-8.5em);
+  }
+}
 
+.icon {
+  margin-right: .15em;
+  font: 2em "FontAwesome";
+  visibility: hidden;
+  @media screen and (max-width: 800px) {
+    visibility: visible;
+  }
+  &:after {
+    content: "\f104";
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .sub-nav-parent {
+    display: none;
+  }
+  .sub-nav-parent.responsive .sub-nav {
+    transform: translateY(0%);
+    transition: all .3s ease-in-out 0s, transform 0s linear .3s;
+    display: initial;
   }
 }
